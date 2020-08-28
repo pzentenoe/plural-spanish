@@ -20,13 +20,13 @@ func main() {
 	fmt.Println(value)
     
     //Validate if word is singular
-    fmt.Println(pluralWords.IsPlural("carne"))
+    fmt.Println(pluralWords.IsPlural("carnes"))
 	
 	value = pluralWords.ToSingular("leches")
 	fmt.Println(value)
     
     //Validate if word is plural
-    fmt.Println(pluralWords.IsPlural("carne"))
+    fmt.Println(pluralWords.IsSingular("carne"))
 
 }
 ````
