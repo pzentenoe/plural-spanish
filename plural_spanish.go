@@ -32,6 +32,7 @@ func (p *pluralWords) registerPluralRules() {
 	p.client.AddPluralRule("(?i)r$", "res")
 	p.client.AddPluralRule("(?i)z$", "ces")
 	p.client.AddPluralRule("(?i)ón$", "ones")
+	p.client.AddPluralRule("(?i)on$", "ones")
 }
 
 func (p *pluralWords) registerSingularRules() {

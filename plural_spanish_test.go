@@ -17,6 +17,7 @@ var tests = []pluralSingular{
 	{"carne", "carnes"},
 	{"sol", "soles"},
 	{"luz", "luces"},
+	{"jabón", "jabones"},
 }
 
 func Test_pluralWords_IsPlural(t *testing.T) {
@@ -44,6 +45,19 @@ func Test_pluralWords_ToPlural(t *testing.T) {
 			if value != tt.pluralWord {
 				t.Errorf("expected: %s but got :%s", expectedValue, value)
 			}
+		}
+
+	})
+}
+
+func Test_pluralWords_ToPlural2(t *testing.T) {
+	t.Run("when words is singular is converted to plural-spanish successfully", func(t *testing.T) {
+		pluralWords := NewPluralWords()
+
+		value := pluralWords.ToPlural("jabon")
+		expectedValue := "jabones"
+		if value != expectedValue {
+			t.Errorf("expected: %s but got :%s", expectedValue, value)
 		}
 
 	})
