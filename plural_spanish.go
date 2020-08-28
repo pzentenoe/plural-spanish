@@ -32,7 +32,11 @@ func (p *pluralWords) registerPluralRules() {
 	p.client.AddPluralRule("(?i)r$", "res")
 	p.client.AddPluralRule("(?i)z$", "ces")
 	p.client.AddPluralRule("(?i)ón$", "ones")
+	p.client.AddPluralRule("(?i)an$", "anes")
+	p.client.AddPluralRule("(?i)en$", "enes")
+	p.client.AddPluralRule("(?i)in$", "ines")
 	p.client.AddPluralRule("(?i)on$", "ones")
+	p.client.AddPluralRule("(?i)un$", "unes")
 }
 
 func (p *pluralWords) registerSingularRules() {
@@ -52,6 +56,10 @@ func (p *pluralWords) registerSingularRules() {
 	p.client.AddSingularRule("(?i)res$", "r")
 	p.client.AddSingularRule("(?i)ces$", "z")
 	p.client.AddSingularRule("(?i)ones$", "ón")
+	p.client.AddSingularRule("(?i)anes", "an")
+	p.client.AddSingularRule("(?i)enes$", "en")
+	p.client.AddSingularRule("(?i)ines$", "in")
+	p.client.AddSingularRule("(?i)unes$", "un")
 }
 
 func (p *pluralWords) IsPlural(word string) bool {

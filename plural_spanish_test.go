@@ -18,6 +18,9 @@ var tests = []pluralSingular{
 	{"sol", "soles"},
 	{"luz", "luces"},
 	{"jabón", "jabones"},
+	{"pan", "panes"},
+	{"pin", "pines"},
+	{"cruz", "cruces"},
 }
 
 func Test_pluralWords_IsPlural(t *testing.T) {
