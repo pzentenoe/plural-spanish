@@ -2,7 +2,15 @@
 
 ##### Libreria utilitaria que incluye reglas de trasformación de palabras plurales y singulares en español
 
-### Modo de uso
+
+#### Agregar a  go modules
+```
+# First line is optional if your project is already defined as a Go module
+go mod init <YOUR_PROJECT_NAME>
+go get github.com/pzentenoe/plural-spanish v1.0.2
+```
+
+#### Modo de uso
 
 ````go
 package main
@@ -19,13 +27,13 @@ func main() {
 	value := pluralWords.ToPlural("carne")
 	fmt.Println(value)
     
-    //Validate if word is singular
+    //Validate if word is plural
     fmt.Println(pluralWords.IsPlural("carnes"))
 	
 	value = pluralWords.ToSingular("leches")
 	fmt.Println(value)
     
-    //Validate if word is plural
+    //Validate if word is singular    
     fmt.Println(pluralWords.IsSingular("carne"))
 
 }
